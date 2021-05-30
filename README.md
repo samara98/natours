@@ -1,3 +1,3 @@
-# Aftertake
+# Natours
 
-MERN Image Gallery
+Nature Tours
