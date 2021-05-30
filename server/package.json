@@ -1,0 +1,47 @@
+{
+  "name": "natours-api",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/bin/www",
+  "scripts": {
+    "start": "node .",
+    "start:dev": "cross-env NODE_ENV=development env-cmd nodemon .",
+    "start:debug": "cross-env DEBUG=natours:* npm run start:dev",
+    "start:debug-express": "cross-env DEBUG=express:* npm run start:dev",
+    "prod": "cross-env NODE_ENV=production DEBUG=express:* env-cmd npm start",
+    "prodemon": "cross-env NODE_ENV=production DEBUG=natours:* env-cmd nodemon .",
+    "prettier:file": "npm run prettier:file:server --prefix .."
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "debug": "^4.3.1",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "html-to-text": "^7.1.1",
+    "http-errors": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.11",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "nodemailer": "^6.6.1",
+    "pug": "^3.0.2",
+    "sharp": "^0.28.3",
+    "slugify": "^1.5.3",
+    "stripe": "^8.150.0",
+    "validator": "^13.6.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.7"
+  }
+}
